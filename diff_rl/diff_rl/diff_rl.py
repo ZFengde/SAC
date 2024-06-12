@@ -31,12 +31,12 @@ class SAC(OffPolicyAlgorithm):
         self,
         policy: Union[str, Type[SACPolicy]],
         env: Union[GymEnv, str],
-        learning_rate: Union[float, Schedule] = 3e-4,
-        buffer_size: int = 1_000_000,  # 1e6
-        learning_starts: int = 100,
+        learning_rate: Union[float, Schedule] = 7.3e-4,
+        buffer_size: int = 3e5,  # 1e6
+        learning_starts: int = 10000,
         batch_size: int = 256,
         tau: float = 0.005,
-        gamma: float = 0.99,
+        gamma: float = 0.98,
         train_freq: Union[int, Tuple[int, str]] = 1,
         gradient_steps: int = 1,
         action_noise: Optional[ActionNoise] = None,
